@@ -1,0 +1,26 @@
+==========Criação de tabela==========
+
+CREATE TABLE logistica(
+	id INT AUTO_INCREMENT PRIMARY KEY,
+	nome VARCHAR(100) NOT NULL,
+	valor FLOAT NOT NULL,
+	quantidade INT NOT NULL
+);
+
+========== Fim da Criação de tabela==========
+
+==========Alterando nome com indereçamento id==========
+
+UPDATE logistica SET nome = 'ALKIN 5L' WHERE id = 1;
+UPDATE logistica SET nome = 'GEl ANTIASEPTICO 5L' WHERE id = 2;
+UPDATE logistica SET nome = 'GRILL CLEANER 5L' WHERE id = 3;
+UPDATE logistica SET nome = 'SABONETE LIQUIDO 5L' WHERE id = 4;
+
+========== Fim Alterando nome com indereçamento id==========
+
+==========Deletando com indereçamento id==========
+
+DELETE  FROM logistica WHERE id = 1;
+DELETE  FROM logistica WHERE id = 2;
+DELETE  FROM logistica WHERE id = 3;
+DELETE  FROM logistica WHERE id = 4;
