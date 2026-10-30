@@ -13,14 +13,14 @@ CREATE TABLE logistica(
 ========== Fim da Criação de tabela==========
 
 ==========Alterando nome com indereçamento id==========
-
+(
 UPDATE logistica SET nome = 'ALKIN 5L' WHERE id = 1;
 UPDATE logistica SET nome = 'GEl ANTIASEPTICO 5L' WHERE id = 2;
 UPDATE logistica SET nome = 'GRILL CLEANER 5L' WHERE id = 3;
 UPDATE logistica SET nome = 'SABONETE LIQUIDO 5L' WHERE id = 4;
 
 ========== Fim Alterando nome com indereçamento id==========
-
+)
 ==========Deletando com indereçamento id==========
 
 DELETE  FROM logistica WHERE id = 1;
@@ -56,3 +56,14 @@ ALTER TABLE table_name ALTER COLUMN Column_name
 new_datatype costraint;
 
 ========== fim Alterar tabela==========
+
+==========Formas de Buscas==========
+
+(=)SELECT * FROM produtos WHERE nome  = 'linux'; 
+(>=)SELECT * FROM produtos WHERE preço  >= '99'; 
+(<=)SELECT * FROM produtos WHERE preço  >= '99'; 
+(!=)SELECT * FROM produtos WHERE preço  != '99'; 
+(LIKE)SELECT * FROM produtos WHERE nome LIKE  'l%(começa), %l(termina) %l%'(possui no meio); 
+(BETWEEN)SELECT * FROM produtos WHERE preço BETWEEN 99 AND 100;
+(or)SELECT * FROM produtos WHERE categorias_id  = 1 or preço = 99;
+(AND)SELECT * FROM produtos WHERE categorias_id = 1 AND preço >= 99;
