@@ -63,7 +63,11 @@ new_datatype costraint;
 (>=)SELECT * FROM produtos WHERE preço  >= '99'; 
 (<=)SELECT * FROM produtos WHERE preço  >= '99'; 
 (!=)SELECT * FROM produtos WHERE preço  != '99'; 
-(LIKE)SELECT * FROM produtos WHERE nome LIKE  'l%(começa), %l(termina) %l%'(possui no meio); 
+(LIKE)SELECT * FROM produtos WHERE nome LIKE  'l%(começa), %l(termina) %l%'(possui no meio), 'l__as'(l+2 caracteres +as); 
 (BETWEEN)SELECT * FROM produtos WHERE preço BETWEEN 99 AND 100;
 (or)SELECT * FROM produtos WHERE categorias_id  = 1 or preço = 99;
 (AND)SELECT * FROM produtos WHERE categorias_id = 1 AND preço >= 99;
+
+(ORDER BY) Orderna os resultados -> asc - crescente, desc - decrecente
+(LIMIT) LIMIT 3; LIMIT 2,3; LIMIT ASC LIMIT5; limita resultados
+(DISTIMCT) Select DISTIMCT cidade from alunos; mostra somente q n tem iguais
