@@ -1,4 +1,4 @@
-link de acesso => https://mysql.devlook.xyz/
+link de acesso => https://mysql.devlook.xyz
 
 
 ==========Criação de tabela==========
@@ -45,3 +45,14 @@ CREATE TABLE produtos(id INT AUTO_INCREMENT PRIMARY KEY,
                       );
 					  
 ========== Fim da Criação de tabela==========
+
+==========Alterar tabela==========
+
+ALTER TABLE name ADD Column_name datatype;
+ALTER TABLE table_name DROP COLUMN Column_name;
+ALTER TABLE table_name RENAME COLUMN old_name 
+to new name;
+ALTER TABLE table_name ALTER COLUMN Column_name
+new_datatype costraint;
+
+========== fim Alterar tabela==========

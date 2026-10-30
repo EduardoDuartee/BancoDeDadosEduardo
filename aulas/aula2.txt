@@ -14,13 +14,6 @@ CREATE TABLE usuarios(
 
 ========== Fim da Criação de tabela==========
 
-==========INSERT VALUES==========
-
-INSERT INTO categorias (nome) VALUES ('Software');
-INSERT INTO categorias (nome) VALUES ('Hardware');
-
-========== Fim do INSERT==========
-
 ==========Criação de tabela com FOREIGN KEY==========
 
 CREATE TABLE produtos(
