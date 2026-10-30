@@ -1,0 +1,33 @@
+==========Criação de tabela==========
+
+CREATE TABLE usuarios(
+	id INT AUTO_INCREMENT PRIMARY KEY,
+    nome VARCHAR(100) NOT NULL,
+    email VARCHAR(150) NOT NULL,
+    telefone VARCHAR(20),
+    bio TEXT,
+    data_nascimento DATE,
+	data_cadastro DATETIME DEFAULT CURRENT_TIMESTAMP,
+    salario DECIMAL(10,2),
+    ativo BOOLEAN DEFAULT 1
+);
+
+========== Fim da Criação de tabela==========
+
+==========INSERT VALUES==========
+
+INSERT INTO categorias (nome) VALUES ('Software');
+INSERT INTO categorias (nome) VALUES ('Hardware');
+
+========== Fim do INSERT==========
+
+==========Criação de tabela com FOREIGN KEY==========
+
+CREATE TABLE produtos(
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nome VARCHAR(100) NOT NULL,
+    id_categorias INT.
+    FOREIGN KEY (id_categorias) REFERENCES categorias(id)
+);
+					  
+========== Fim da Criação de tabela==========

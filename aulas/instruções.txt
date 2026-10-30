@@ -1,3 +1,6 @@
+link de acesso => https://mysql.devlook.xyz/
+
+
 ==========Criação de tabela==========
 
 CREATE TABLE logistica(
@@ -24,3 +27,21 @@ DELETE  FROM logistica WHERE id = 1;
 DELETE  FROM logistica WHERE id = 2;
 DELETE  FROM logistica WHERE id = 3;
 DELETE  FROM logistica WHERE id = 4;
+
+==========INSERT VALUES==========
+
+INSERT INTO categorias (nome) VALUES ('Software');
+INSERT INTO categorias (nome) VALUES ('Hardware');
+
+========== Fim do INSERT==========
+
+
+==========Criação de tabela com FOREIGN KEY==========
+
+CREATE TABLE produtos(id INT AUTO_INCREMENT PRIMARY KEY,
+                      nome VARCHAR(100) NOT NULL,
+                      id_categorias INT.
+                      FOREIGN KEY (id_categorias) REFERENCES categorias(id)
+                      );
+					  
+========== Fim da Criação de tabela==========
