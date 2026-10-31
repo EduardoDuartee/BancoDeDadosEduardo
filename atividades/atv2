@@ -1,0 +1,77 @@
+=> CRIANDO TABELA
+
+CREATE TABLE Clientes(
+	id INT AUTO_INCREMENT PRIMARY KEY,
+    	nome VARCHAR(100) NOT NULL,
+    	email VARCHAR(150) NOT NULL,
+	telefone VARCHAR(20)NOT NULL,
+    	data_nascimento DATENOT NULL,
+	data_cadastro DATETIME DEFAULT CURRENT_TIMESTAMP,
+    	ativo BOOLEAN DEFAULT 1
+);
+
+=================================================================
+
+CREATE TABLE Categorias(
+	id INT AUTO_INCREMENT PRIMARY KEY,
+    	Nome VARCHAR(100) NOT NULL,
+    	Descrição Text NOT NULL,
+);
+
+
+=================================================================
+
+CREATE TABLE Produtos(
+	id INT AUTO_INCREMENT PRIMARY KEY,
+    	Nome VARCHAR(100) NOT NULL,
+    	Descrição TEXT NOT NULL,
+	    Preço DECIMAL (10,2)NOT NULL,
+	    Categoria_id INT NOT NULL,
+    	ativo BOOLEAN DEFAULT 1,
+	    FOREIGN KEY (categoria_id) REFERENCES Categorias(id)
+);
+
+=================================================================
+
+CREATE TABLE Pedidos(
+	id INT AUTO_INCREMENT PRIMARY KEY,
+	Cliente_id NOT NULL,
+	Data_prdido DATETIME DEFAULT CURRENT_TIMESTAMP,
+	Valor_Total DECIMAL NOT NULL,
+	FOREIGN KEY (Cliente_id) REFERENCES Clientes(id)
+);
+=================================================================
+
+CREATE TABLE Itens_Pedidos(
+	id INT AUTO_INCREMENT PRIMARY KEY,
+	Pedidos_id INT NOT NULL,
+	produtos_id INT NOT NULL,
+	Quantidade_id INT NOT NULL,
+	Preço_Unitario INT
+	FOREIGN KEY (Pedidos_id) REFERENCES Pedidos(id)
+	FOREIGN KEY (produtos_id) REFERENCES Produtos(id)
+	FOREIGN KEY (Quantidade_id) REFERENCES Produtos(id)
+	FOREIGN KEY (Preço_Unitario) REFERENCES Produtos(id)
+);
+
+=> FIM DAS TABELA
+=> INSERINDO ITENS DAS CATEGORIAS
+=> FIM DAS CATEGORIAS
+
+=> INSERINDO ITENS DOS PRODUTOS 
+
+INSERT INTO Produtos (nome, descrição, Preço, Quantidade, id_categorias, ativo) VALUES ('Microst Word', 'é um processador de textos (editor de texto) desenvolvido pela Microsoft', 19.90, 1, 1, 1);
+INSERT INTO Produtos (nome, descrição, Preço, Quantidade, id_categorias, ativo) VALUES ('Microst Excel', 'é um software de planilha eletrônica desenvolvido pela Microsoft, integrado ao pacote Microsoft 365', 17.90, 1, 1, 1);
+INSERT INTO Produtos (nome, descrição, Preço, Quantidade, id_categorias, ativo) VALUES ('Google Docs', 'é um processador de textos gratuito baseado em nuvem, desenvolvido pelo Google', 22.90, 1, 1, 1);
+
+INSERT INTO Produtos (nome, descrição, Preço, Quantidade, id_categorias, ativo) VALUES ('processador', 'Eleve o desempenho do seu computador para o próximo nível com este processador de arquitetura avançada. Equipado com múltiplos núcleos de processamento e frequências ultra-altas', 1999.90, 1, 2, 1);
+INSERT INTO Produtos (nome, descrição, Preço, Quantidade, id_categorias, ativo) VALUES ('processador', 'Eleve o desempenho do seu computador para o próximo nível com este processador de arquitetura avançada. Equipado com múltiplos núcleos de processamento e frequências ultra-altas', 1999.90, 1, 2, 1);
+INSERT INTO Produtos (nome, descrição, Preço, Quantidade, id_categorias, ativo) VALUES ('processador', 'Eleve o desempenho do seu computador para o próximo nível com este processador de arquitetura avançada. Equipado com múltiplos núcleos de processamento e frequências ultra-altas', 1999.90, 1, 2, 1);
+
+
+INSERT INTO Produtos (nome, descrição, Preço, Quantidade, id_categorias, ativo) VALUES ('Microst Word', 'é um processador de textos (editor de texto) desenvolvido pela Microsoft', 19.90, 1, 1, 1);
+INSERT INTO Produtos (nome, descrição, Preço, Quantidade, id_categorias, ativo) VALUES ('Microst Word', 'é um processador de textos (editor de texto) desenvolvido pela Microsoft', 19.90, 1, 1, 1);
+INSERT INTO Produtos (nome, descrição, Preço, Quantidade, id_categorias, ativo) VALUES ('Microst Word', 'é um processador de textos (editor de texto) desenvolvido pela Microsoft', 19.90, 1, 1, 1);
+
+INSERT INTO Produtos (nome, descrição, Preço, Quantidade, id_categorias, ativo) VALUES ('Microst Word', 'é um processador de textos (editor de texto) desenvolvido pela Microsoft', 19.90, 1, 1, 1);
+INSERT INTO Produtos (nome, descrição, Preço, Quantidade, id_categorias, ativo) VALUES ('Microst Word', 'é um processador de textos (editor de texto) desenvolvido pela Microsoft', 19.90, 1, 1, 1);
