@@ -6,27 +6,27 @@ link de acesso => https://mysql.devlook.xyz
 CREATE TABLE logistica(
 	id INT AUTO_INCREMENT PRIMARY KEY,
 	nome VARCHAR(100) NOT NULL,
-	valor FLOAT NOT NULL,
+	valor DECIMAL NOT NULL,
 	quantidade INT NOT NULL
 );
 
 ========== Fim da Criação de tabela==========
 
-==========Alterando nome com indereçamento id==========
-(
+==========Alterando nome com indereçamento id==========(
 UPDATE logistica SET nome = 'ALKIN 5L' WHERE id = 1;
 UPDATE logistica SET nome = 'GEl ANTIASEPTICO 5L' WHERE id = 2;
 UPDATE logistica SET nome = 'GRILL CLEANER 5L' WHERE id = 3;
 UPDATE logistica SET nome = 'SABONETE LIQUIDO 5L' WHERE id = 4;
 
 ========== Fim Alterando nome com indereçamento id==========
-)
-==========Deletando com indereçamento id==========
+);
 
+DEL com indereçamento id(
 DELETE  FROM logistica WHERE id = 1;
 DELETE  FROM logistica WHERE id = 2;
 DELETE  FROM logistica WHERE id = 3;
 DELETE  FROM logistica WHERE id = 4;
+);
 
 ==========INSERT VALUES==========
 
@@ -57,7 +57,7 @@ new_datatype costraint;
 
 ========== fim Alterar tabela==========
 
-==========Formas de Buscas==========
+(==========Formas de Buscas==========
 
 (=)SELECT * FROM produtos WHERE nome  = 'linux'; 
 (>=)SELECT * FROM produtos WHERE preço  >= '99'; 
@@ -68,6 +68,23 @@ new_datatype costraint;
 (or)SELECT * FROM produtos WHERE categorias_id  = 1 or preço = 99;
 (AND)SELECT * FROM produtos WHERE categorias_id = 1 AND preço >= 99;
 
+===============================================================================
+
 (ORDER BY) Orderna os resultados -> asc - crescente, desc - decrecente
+SELECT * FROM boletim ORDER BY Nome_aluno ASC;
+
+===============================================================================
+
+===============================================================================
 (LIMIT) LIMIT 3; LIMIT 2,3; LIMIT ASC LIMIT5; limita resultados
+SELECT * FROM boletim ORDER BY Nome_aluno ASC LIMIT 2;
+
+===============================================================================
+
+===============================================================================
+
 (DISTIMCT) Select DISTIMCT cidade from alunos; mostra somente q n tem iguais
+SELECT DISTINCT Nome_aluno FROM boletim;
+
+===============================================================================
+========== FIM Formas de Buscas==========)
