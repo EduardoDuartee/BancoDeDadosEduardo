@@ -56,8 +56,28 @@ CREATE TABLE Itens_Pedidos(
 );
 
 => FIM DAS TABELA
+
 => INSERINDO ITENS DAS CATEGORIAS
+
+INSERT Categorias (nome, Descrição) VALUES (software, Microsoft Word, Microsoft Excel e Google Docs.);
+INSERT Categorias (nome, Descrição) VALUES (Processador, placas mae e memorias Ram);
+INSERT Categorias (nome, Descrição) VALUES (mouses, teclados, monitores, headsets, microfones, webcams e impressoras.);
+INSERT Categorias (nome, Descrição) VALUES (adaptadores, hubs USB, pen drives, cartões de memória, capas, mochilas e suportes);
+INSERT Categorias (nome, Descrição) VALUES ( Manutenção de computadores e notebooks, limpeza interna, troca de telas, formatação);
+
 => FIM DAS CATEGORIAS
+=> INSERINDO Clientes
+
+INSERT INTO Clientes (Nome, Email, Telefone, data_nascimento, data_cadastro, ativo) VALUES ("Eduardo", "A1@gmail.com", "(11)11111-1111", '2001-25-11', current_timestamp(), 1);
+INSERT INTO Clientes (Nome, Email, Telefone, data_nascimento, data_cadastro, ativo) VALUES ('Lucas', 'A2@gmail.com', '(22)22222-2222', '2004-05-09', current_timestamp(), 1);
+INSERT INTO Clientes (Nome, Email, Telefone, data_nascimento, data_cadastro, ativo) VALUES ('Joao', 'A3@gmail.com', '(33)33333-3333', '2006-02-11', current_timestamp(), 1);
+INSERT INTO Clientes (Nome, Email, Telefone, data_nascimento, data_cadastro, ativo) VALUES ('Anna', 'A4@gmail.com', '(44)44444-4444', '2002-12-07', current_timestamp(), 1);
+INSERT INTO Clientes (Nome, Email, Telefone, data_nascimento, data_cadastro, ativo) VALUES ('Maria', 'A5@gmail.com', '(55)55555-5555', '2003-09-07', current_timestamp(), 1);
+INSERT INTO Clientes (Nome, Email, Telefone, data_nascimento, data_cadastro, ativo) VALUES ('Jeferson', 'A6@gmail.com', '(66)66666-6666', '2002-02-05', current_timestamp(), 1);
+INSERT INTO Clientes (Nome, Email, Telefone, data_nascimento, data_cadastro, ativo) VALUES ('Andre', 'A7@gmail.com', '(77)77777-7777', '2001-07-03', current_timestamp(), 1);
+INSERT INTO Clientes (Nome, Email, Telefone, data_nascimento, data_cadastro, ativo) VALUES ('Nathally', 'A8@gmail.com', '(88)88888-8888', '1998-05-01', current_timestamp(), 1);
+
+=>FIM DA AREA DOS CLIENTES
 
 => INSERINDO ITENS DOS PRODUTOS 
 => 1
