@@ -22,10 +22,11 @@ CREATE TABLE Categorias(
 =================================================================
 
 CREATE TABLE Produtos(
-	id INT AUTO_INCREMENT PRIMARY KEY,
+		id INT AUTO_INCREMENT PRIMARY KEY,
     	Nome VARCHAR(100) NOT NULL,
     	Descrição TEXT NOT NULL,
 	    Preço DECIMAL (10,2)NOT NULL,
+    	Quantidade INT NOT NULL,
 	    Categoria_id INT NOT NULL,
     	ativo BOOLEAN DEFAULT 1,
 	    FOREIGN KEY (categoria_id) REFERENCES Categorias(id)
@@ -59,19 +60,28 @@ CREATE TABLE Itens_Pedidos(
 => FIM DAS CATEGORIAS
 
 => INSERINDO ITENS DOS PRODUTOS 
+=> 1
+INSERT INTO Produtos (nome, descrição, Preço, Quantidade, Categoria_id, ativo) VALUES ('Microst Word', 'é um processador de textos (editor de texto) desenvolvido pela Microsoft', 19.90, 1, 1, 1);
+INSERT INTO Produtos (nome, descrição, Preço, Quantidade, Categoria_id, ativo) VALUES ('Microst Excel', 'é um software de planilha eletrônica desenvolvido pela Microsoft, integrado ao pacote Microsoft 365', 17.90, 1, 1, 1);
+INSERT INTO Produtos (nome, descrição, Preço, Quantidade, Categoria_id, ativo) VALUES ('Google Docs', 'é um processador de textos gratuito baseado em nuvem, desenvolvido pelo Google', 22.90, 1, 1, 1);
 
-INSERT INTO Produtos (nome, descrição, Preço, Quantidade, id_categorias, ativo) VALUES ('Microst Word', 'é um processador de textos (editor de texto) desenvolvido pela Microsoft', 19.90, 1, 1, 1);
-INSERT INTO Produtos (nome, descrição, Preço, Quantidade, id_categorias, ativo) VALUES ('Microst Excel', 'é um software de planilha eletrônica desenvolvido pela Microsoft, integrado ao pacote Microsoft 365', 17.90, 1, 1, 1);
-INSERT INTO Produtos (nome, descrição, Preço, Quantidade, id_categorias, ativo) VALUES ('Google Docs', 'é um processador de textos gratuito baseado em nuvem, desenvolvido pelo Google', 22.90, 1, 1, 1);
+=> 2
+INSERT INTO Produtos (nome, descrição, Preço, Quantidade, Categoria_id, ativo) VALUES ('processador', 'Eleve o desempenho do seu computador para o próximo nível com este processador de arquitetura avançada. Equipado com múltiplos núcleos de processamento e frequências ultra-altas', 1999.90, 1, 2, 1);
+INSERT INTO Produtos (nome, descrição, Preço, Quantidade, Categoria_id, ativo) VALUES ('Placa-Mae', 'estabilidade máxima, alta velocidade de transferência e facilidade para futuros upgrades', 199.90, 1, 2, 1);
+INSERT INTO Produtos (nome, descrição, Preço, Quantidade, Categoria_id, ativo) VALUES ('Memoria Ram', 'A memória RAM é o upgrade com o melhor custo-benefício para transformar a sua máquina', 699.90, 1, 2, 1);
 
-INSERT INTO Produtos (nome, descrição, Preço, Quantidade, id_categorias, ativo) VALUES ('processador', 'Eleve o desempenho do seu computador para o próximo nível com este processador de arquitetura avançada. Equipado com múltiplos núcleos de processamento e frequências ultra-altas', 1999.90, 1, 2, 1);
-INSERT INTO Produtos (nome, descrição, Preço, Quantidade, id_categorias, ativo) VALUES ('processador', 'Eleve o desempenho do seu computador para o próximo nível com este processador de arquitetura avançada. Equipado com múltiplos núcleos de processamento e frequências ultra-altas', 1999.90, 1, 2, 1);
-INSERT INTO Produtos (nome, descrição, Preço, Quantidade, id_categorias, ativo) VALUES ('processador', 'Eleve o desempenho do seu computador para o próximo nível com este processador de arquitetura avançada. Equipado com múltiplos núcleos de processamento e frequências ultra-altas', 1999.90, 1, 2, 1);
+=> 3
+INSERT INTO Produtos (nome, descrição, Preço, Quantidade, Categoria_id, ativo) VALUES ('Mause', 'é o mouse gamer ultra-leve projetado para quem busca precisão cirúrgica e velocidade máxima competitiva', 349.90, 1, 3, 1);
+INSERT INTO Produtos (nome, descrição, Preço, Quantidade, Categoria_id, ativo) VALUES ('Teclado', 'teclado mecânico compacto perfeito para quem busca velocidade de resposta extrema', 199.90, 1, 3, 1);
+INSERT INTO Produtos (nome, descrição, Preço, Quantidade, Categoria_id, ativo) VALUES ('Headset', 'headset gamer definitivo para quem busca imersão sonora total, comunicação cristalina com a equipe e conforto para passar horas jogando', 699.90, 1, 3, 1);
 
+=> 4
+INSERT INTO Produtos (nome, descrição, Preço, Quantidade, Categoria_id, ativo) VALUES ('Adaptador', 'é o acessório indispensável para quem busca estabilidade máxima de rede', 49.90, 0, 4, 0);
+INSERT INTO Produtos (nome, descrição, Preço, Quantidade, Categoria_id, ativo) VALUES ('Pen Drive', 'pen drive ideal para quem precisa transferir arquivos pesados com rapidez, segurança e total praticidade no dia a dia', 18.50, 5, 4, 1);
+INSERT INTO Produtos (nome, descrição, Preço, Quantidade, Categoria_id, ativo) VALUES ('Cartão de Memoria', 'cartão de memória ideal para quem busca o máximo de desempenho no armazenamento de consoles', 99.90, 3, 4, 1);
 
-INSERT INTO Produtos (nome, descrição, Preço, Quantidade, id_categorias, ativo) VALUES ('Microst Word', 'é um processador de textos (editor de texto) desenvolvido pela Microsoft', 19.90, 1, 1, 1);
-INSERT INTO Produtos (nome, descrição, Preço, Quantidade, id_categorias, ativo) VALUES ('Microst Word', 'é um processador de textos (editor de texto) desenvolvido pela Microsoft', 19.90, 1, 1, 1);
-INSERT INTO Produtos (nome, descrição, Preço, Quantidade, id_categorias, ativo) VALUES ('Microst Word', 'é um processador de textos (editor de texto) desenvolvido pela Microsoft', 19.90, 1, 1, 1);
+=> 5
 
-INSERT INTO Produtos (nome, descrição, Preço, Quantidade, id_categorias, ativo) VALUES ('Microst Word', 'é um processador de textos (editor de texto) desenvolvido pela Microsoft', 19.90, 1, 1, 1);
-INSERT INTO Produtos (nome, descrição, Preço, Quantidade, id_categorias, ativo) VALUES ('Microst Word', 'é um processador de textos (editor de texto) desenvolvido pela Microsoft', 19.90, 1, 1, 1);
+INSERT INTO Produtos (nome, descrição, Preço, Quantidade, Categoria_id, ativo) VALUES ('Computadores', 'Manutenção de componentes e limpeza', 150.00, 5, 5, 1);
+INSERT INTO Produtos (nome, descrição, Preço, Quantidade, Categoria_id, ativo) VALUES ('Notebooks', 'Manutenção de componentes e limpeza', 18.50, 5, 5, 1);
+INSERT INTO Produtos (nome, descrição, Preço, Quantidade, Categoria_id, ativo) VALUES ('Consoles', 'Manutenção de componentes e limpeza', 99.90, 3, 5, 1);
