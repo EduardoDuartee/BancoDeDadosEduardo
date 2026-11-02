@@ -2,20 +2,20 @@
 
 CREATE TABLE Clientes(
 	id INT AUTO_INCREMENT PRIMARY KEY,
-    	nome VARCHAR(100) NOT NULL,
-    	email VARCHAR(150) NOT NULL,
+    nome VARCHAR(100) NOT NULL,
+    email VARCHAR(150) NOT NULL UNIQUE,
 	telefone VARCHAR(20)NOT NULL,
-    	data_nascimento DATENOT NULL,
+    data_nascimento DATE NOT NULL,
 	data_cadastro DATETIME DEFAULT CURRENT_TIMESTAMP,
-    	ativo BOOLEAN DEFAULT 1
+    ativo BOOLEAN DEFAULT 1
 );
 
 =================================================================
 
 CREATE TABLE Categorias(
 	id INT AUTO_INCREMENT PRIMARY KEY,
-    	Nome VARCHAR(100) NOT NULL,
-    	Descrição Text NOT NULL,
+    Nome VARCHAR(100) NOT NULL,
+    Descrição TEXT NOT NULL
 );
 
 
@@ -34,13 +34,16 @@ CREATE TABLE Produtos(
 
 =================================================================
 
-CREATE TABLE Pedidos(
-	id INT AUTO_INCREMENT PRIMARY KEY,
-	Cliente_id NOT NULL,
-	Data_prdido DATETIME DEFAULT CURRENT_TIMESTAMP,
-	Valor_Total DECIMAL NOT NULL,
-	FOREIGN KEY (Cliente_id) REFERENCES Clientes(id)
+CREATE TABLE Pedidos (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    Cliente_id INT NOT NULL, 
+    Produto_id INT NOT NULL, 
+    Data_pedido DATETIME DEFAULT CURRENT_TIMESTAMP,
+    Valor_Total DECIMAL(10,2) NOT NULL,
+    FOREIGN KEY (Cliente_id) REFERENCES Clientes(id), 
+    FOREIGN KEY (Produto_id) REFERENCES Produtos(id)  
 );
+
 =================================================================
 
 CREATE TABLE Itens_Pedidos(
@@ -48,10 +51,10 @@ CREATE TABLE Itens_Pedidos(
 	Pedidos_id INT NOT NULL,
 	produtos_id INT NOT NULL,
 	Quantidade_id INT NOT NULL,
-	Preço_Unitario INT
-	FOREIGN KEY (Pedidos_id) REFERENCES Pedidos(id)
-	FOREIGN KEY (produtos_id) REFERENCES Produtos(id)
-	FOREIGN KEY (Quantidade_id) REFERENCES Produtos(id)
+	Preço_Unitario INT NOT NULL,
+	FOREIGN KEY (Pedidos_id) REFERENCES Pedidos(id),
+	FOREIGN KEY (produtos_id) REFERENCES Produtos(id),
+	FOREIGN KEY (Quantidade_id) REFERENCES Produtos(id),
 	FOREIGN KEY (Preço_Unitario) REFERENCES Produtos(id)
 );
 
@@ -59,11 +62,11 @@ CREATE TABLE Itens_Pedidos(
 
 => INSERINDO ITENS DAS CATEGORIAS
 
-INSERT Categorias (nome, Descrição) VALUES (software, Microsoft Word, Microsoft Excel e Google Docs.);
-INSERT Categorias (nome, Descrição) VALUES (Processador, placas mae e memorias Ram);
-INSERT Categorias (nome, Descrição) VALUES (mouses, teclados, monitores, headsets, microfones, webcams e impressoras.);
-INSERT Categorias (nome, Descrição) VALUES (adaptadores, hubs USB, pen drives, cartões de memória, capas, mochilas e suportes);
-INSERT Categorias (nome, Descrição) VALUES ( Manutenção de computadores e notebooks, limpeza interna, troca de telas, formatação);
+INSERT INTO Categorias (nome, Descrição) VALUES ('software', 'Microsoft Word, Microsoft Excel e Google Docs.');
+INSERT INTO Categorias (nome, Descrição) VALUES ('Hardware','Processador, placas mae e memorias Ram');
+INSERT INTO Categorias (nome, Descrição) VALUES ('Perifericos','mouses, teclados, monitores, headsets, microfones, webcams e impressoras.');
+INSERT INTO Categorias (nome, Descrição) VALUES ('Acessorios', 'adaptadores, hubs USB, pen drives, cartões de memória, capas, mochilas e suportes');
+INSERT INTO Categorias (nome, Descrição) VALUES ('Serviços', 'Manutenção de computadores e notebooks, limpeza interna, troca de telas, formatação');
 
 => FIM DAS CATEGORIAS
 => INSERINDO Clientes
