@@ -1,5 +1,6 @@
 link de acesso => https://mysql.devlook.xyz
 
+DER => Diagrama entidade Relacionamento
 fluxograma =>
 
 . quais informaçoes serao guardadas
@@ -92,6 +93,33 @@ SELECT * FROM boletim ORDER BY Nome_aluno ASC LIMIT 2;
 
 (DISTIMCT) Select DISTIMCT cidade from alunos; mostra somente q n tem iguais
 SELECT DISTINCT Nome_aluno FROM boletim;
+
+===============================================================================
+
+(AVG) Retorna media dos valores de uma coluna numerica
+SELECT AVG(preço) AS preço_medio FROM  produtos;
+
+===============================================================================
+
+(MIN) Retorna os valores minimos de uma coluna numerica
+SELECT MIN(preço) AS preço_minimo FROM  produtos;
+
+===============================================================================
+
+(MAX) Retorna os valores MAX de uma coluna numerica
+SELECT MAX(preço) AS preço_maximo FROM  produtos;
+
+===============================================================================
+
+(SUM) Retorna media dos valores de uma coluna numerica
+SELECT SUM(preço) AS total_preço FROM  produtos;
+
+===============================================================================
+
+===============================================================================
+
+(COUNT) Retorna media dos valores de uma coluna numerica
+SELECT COUNT(ativo) AS total FROM  produtos;
 
 ===============================================================================
 ========== FIM Formas de Buscas==========)

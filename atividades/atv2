@@ -106,3 +106,40 @@ INSERT INTO Produtos (nome, descrição, Preço, Quantidade, Categoria_id, ativo
 INSERT INTO Produtos (nome, descrição, Preço, Quantidade, Categoria_id, ativo) VALUES ('Computadores', 'Manutenção de componentes e limpeza', 150.00, 5, 5, 1);
 INSERT INTO Produtos (nome, descrição, Preço, Quantidade, Categoria_id, ativo) VALUES ('Notebooks', 'Manutenção de componentes e limpeza', 18.50, 5, 5, 1);
 INSERT INTO Produtos (nome, descrição, Preço, Quantidade, Categoria_id, ativo) VALUES ('Consoles', 'Manutenção de componentes e limpeza', 99.90, 3, 5, 1);
+
+==================================================================================================================================================================
+
+=> Pesquisas
+
+=> Ordena os nomes em ordem Crescente
+SELECT * FROM Clientes ORDER BY nome ASC;
+
+=> Ordena os nomes em ordem Crescente e limita sua exibição em 2
+SELECT * FROM Clientes ORDER BY nome ASC LIMIT 2;
+
+=> Ordena os nomes em ordem decrescente
+SELECT * FROM Clientes ORDER BY nome DESC;
+
+=> Ordena os nomes em ordem Decrescente e limita sua exibição em 2
+SELECT * FROM Clientes ORDER BY nome Desc LIMIT 2;
+
+=>Mostra somente q n tem iguais 
+SELECT DISTINCT nome FROM Clientes;
+
+=> media dos preços
+SELECT AVG(Preço) AS preço_medio FROM  Produtos;
+
+=> minimo dos preços
+SELECT MIN(Preço) AS preço_minimo FROM  Produtos;
+
+=> maximo dos preços
+SELECT MAX(Preço) AS preço_maximo FROM  Produtos;
+
+=> total dos preços
+SELECT SUM(Preço) AS total_preço FROM  Produtos;
+
+=>se mostra todos os itens
+SELECT COUNT(Nome) AS total FROM  Produtos;
+
+=> Mostra somente os ativos
+SELECT COUNT(ativo) AS total FROM  Produtos WHERE ativo = 1;
