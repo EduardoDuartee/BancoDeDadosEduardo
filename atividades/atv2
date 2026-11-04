@@ -51,9 +51,9 @@ CREATE TABLE Itens_Pedidos(
 	Pedidos_id INT NOT NULL,
 	produtos_id INT NOT NULL,
 	Quantidade_id INT NOT NULL,
-	Preço_Unitario INT NOT NULL,
+	Preço_Unitario DECIMAL (10,2)  NOT NULL,
 	FOREIGN KEY (Pedidos_id) REFERENCES Pedidos(id),
-	FOREIGN KEY (produtos_id) REFERENCES Produtos(id),
+	FOREIGN KEY (produtos_id) REFERENCES Produtos(id)
 );
 
 => FIM DAS TABELA

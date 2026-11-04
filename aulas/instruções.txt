@@ -1,5 +1,12 @@
 link de acesso => https://mysql.devlook.xyz
 
+fluxograma =>
+
+. quais informaçoes serao guardadas
+. quais tabelas precisaremos criar criar
+. como  as tabelas vao se conectar
+. e quais regras deverao seguir
+
 
 ==========Criação de tabela==========
 
