@@ -1,5 +1,8 @@
 link de acesso => https://mysql.devlook.xyz
 
+acesso via vps
+$Host = '194.61.238.119';
+
 DER => Diagrama entidade Relacionamento
 fluxograma =>
 
