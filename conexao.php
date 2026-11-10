@@ -4,7 +4,7 @@
 // PDO: Interface doPHP que permite conversa com banco de dados por meio de drive
 
 // host = 'localhost'
-$Host = 'localhost';
+$host = 'localhost';
 $db = 'eduardoa755_db1';
 $user = 'eduardoa755';
 $pass = '755!@#';
