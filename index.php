@@ -2,13 +2,14 @@
 
 
 require_once 'conexao.php';
-$sql = "CREATE TABLE IF NOT EXISTS usuarios()
+$sql = "CREATE TABLE IF NOT EXISTS usuarios(
     id INT AUTO_INCREMENT PRIMARY KEY,
     nome VARCHAR(100) NOT NULL,
     email VARCHAR(150) NOT NULL UNIQUE,
 	telefone VARCHAR(20)NOT NULL,
     ativo BOOLEAN DEFAULT 1,
 	data_cadastro DATETIME DEFAULT CURRENT_TIMESTAMP
+    )
 ";
 //prepara o comando sql
 //stmt = STATEMENT
